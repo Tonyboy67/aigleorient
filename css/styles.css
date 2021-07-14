@@ -159,9 +159,15 @@
         transition-property: background-color;
         transition-duration: 0.5s;
     }
+    /*Le lien et l'événement pour
+     les clicks sur les plats choisis 
+     ici des "articles", et leur ajout
+     au panier viendront plus tard*/
     
     article:hover {
         background-color: lightgreen;
+        cursor: pointer;
+        /* pointer-events: ; */
     }
     /* .nav-item {
         width: 250px;
