@@ -1,0 +1,115 @@
+/*head*/
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.logoimg {
+    height: 10%;
+    width: 10%;
+    align-items: center;
+}
+
+figure figcaption {
+    align-items: center;
+}
+
+
+/*body*/
+
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+header figure figcaption {
+    font-weight: bold;
+    font-family: Helvetica, Impact, sans-serif;
+}
+
+address a {
+    font-weight: bold;
+}
+
+.titreprincipal {
+    font-style: italic;
+    /*background-color: mediumturquoise;*/
+    background-color: gold;
+    color: rgb(81, 58, 42);
+    /*Code couleur peinture RAL 8028 */
+    text-align: center;
+    font-family: Helvetica, Impact, sans-serif;
+    font-weight: bolder;
+}
+
+body header h1 {
+    text-align: center;
+    color: #513a2a;
+    /*#4E3B31;*/
+    /*font-size:80px;*/
+    margin: 2rem 0;
+    background-color: rgb(81, 58, 42);
+    color: gold;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin: 1rem;
+}
+
+.conteneur-plats .plat {
+    font-family: Helvetica, Impact, sans-serif;
+    margin: 0.5rem;
+    background-color: orange;
+    font-weight: bolder;
+    width: 350px;
+    border-radius: 10px;
+}
+
+.conteneur-plats .plat p {
+    padding: 0.5rem;
+}
+
+.conteneur-plats .flexbox-container {
+    display: flex;
+    /*FLEX DIRECTION*/
+    flex-direction: row;
+    /*FLEX WRAP*/
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /*justify-content: stretch;*/
+    /*ALIGN ITEMS */
+    /*ALIGN CONTENT*/
+    /*FLEX SHRINK*/
+}
+
+.boisson {
+    font-family: Helvetica, Impact, sans-serif;
+    margin: 0.5rem;
+    padding: 0.5em;
+    background-color: lightblue;
+    font-weight: bolder;
+    width: 350px;
+    border-radius: 10px;
+}
+
+.grid-container {
+    display: grid;
+    text-align: center;
+    /*background-color: #333333;
+    color: #FFF;*/
+    align-content: center;
+}
+
+.boisson:nth-child(odd) {
+    background-color: darkturquoise;
+}
+
+.boisson:nth-child(even) {
+    background-color: lightpink;
+}
+
+nav {
+    /* width: 25%; */
+}

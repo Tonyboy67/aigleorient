@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Restaurant du Sichuan Aigle d'Orient - 露凝香•川味居</title>
+    <link rel="icon" href="images/icones/logoao.jpg" />
+    <!--<link rel="stylesheet" href="css/reset.css"/>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Menu Aigle d'Orient : sélection de plats - 露凝香•川味居 - 菜单 - 点菜">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!--Nos styles à nous...-->
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+    <header>
+
+        <!--Je choisis un "no expand", car la liste du menu est beaucoup trop longue-->
+        <!--"<nav class="navbar navbar-expand-lg"-->
+        <nav class="navbar no expand class bg-dark navbar-dark fixed-top listederoulante" id="navbarDynamique">
+
+            <!--div contenant les trois items du menu de navigation
+                - Deux boutons sont nécessaires : en effet, la liste des plats étant trop longue, et celle-ci ne pouvant être scrollable une fois déroulée, on ne pouvait voir sur mon mobile que le début de la liste jusqu'aux "Desserts".
+                J'ai donc subdivisé le tout en deux listes qui restent visibles chacune quelle que soit la hauteur de l'écran, dont le déroulement est piloté par deux poutons respectivement "PLATS" et "BOISSONS"-->
+            <div class="menunavigation">
+                <a class="navbar-brand" href="#"><img src="./images/icones/logoao.jpg" alt="Restaurant Aigle d'Orient - 露凝香•川味居" class="logoimg" /></a>
+
+                <div id="groupeboutons">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTypesPlat" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>PLATS</button>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarBoissons" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>BOISSONS</button>
+
+
+                    <a class="nav-link" href="./apropos.html">关于 - &Agrave; propos / Contact<span class="sr-only">(current)</span></a>
+
+                </div>
+            </div>
+
+
+            <div class="collapse navbar-collapse navbar-inverse black listederoulante" id="navbarTypesPlat">
+                <ul class="navbar-nav ml-auto listederoulante">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Haut de page<span class="sr-only">(current)</span></a>
+                    </li>
+                    <!--
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./apropos.html">关于 - &Agrave; propos / Contact<span class="sr-only">(current)</span></a>
+                    </li>
+                -->
+                    <li class="nav-item active">
+                        <a class="nav-link text-uppercase" href="#tresor">镇店之宝 - Le Trésor de Chongqing</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-uppercase" href="#nouveauxplats">新品尝鲜 - Nouveautés</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-uppercase" href="#specsichuan">我们经典招牌菜 - Spécialités du Sichuan</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-uppercase" href="#platssichuan">川香热菜 - Plats du Sichuan</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-uppercase" href="#woks">香煮干锅 - Woks</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-uppercase" href="#platsfroids" text-uppercase>别样凉菜 - Plats froids variés</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-uppercase" href="#legsautes">清心时蔬 - Légumes sautés</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-uppercase" href="#soupes">解腻靓汤 - Soupes</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-uppercase" href="#accompagnements">主食 - Accompagnements</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-uppercase" href="#desserts">甜点 - Desserts</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="collapse navbar-collapse navbar-inverse black listederoulante" id="navbarBoissons">
+                <ul class="navbar-nav ml-auto listederoulante">
+                    <li class="nav-item active">
+                        <a class="nav-link text-uppercase" href="#aperitifs">开胃酒 - Apéritifs</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-uppercase" href="#bieres">啤酒 - Bières</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-uppercase" href="#bchaudes">热的饮料 - Boissons chaudes</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-uppercase" href="#vrouges">红酒 - Vins rouges</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-uppercase" href="#vblancs">白葡萄酒 - Vins blancs</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-uppercase" href="#vrose">玫瑰酒 - Vin rosé</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-uppercase" href="#vpichet">投手里装得酒 - Vin en pichet</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="flexbox-container-type-plats ">
+        <!-- <h1>露凝香•川味居<br />AIGLE d'ORIENT </h1>-->
+
+        <section class="conteneur-plats" id="tresorChongqing">
+            <h2 id="tresor" class="titretypeplat ">镇店之宝 - Le Trésor de Chongqing</h2>
+            <div class="flexbox-container ">
+                <article class="plat" id="poissonetuvee">
+                    <p>霸王纸包鱼（仅限堂食）<br /> 香辣味/泡椒味/蒜香味/豆豉味
+                        <br /> 32,80 €
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="conteneur-plats" id="nouveautes">
+            <h2 id="nouveauxplats" class="titretypeplat ">新品尝鲜 - Nouveautés</h2>
+            <div class="flexbox-container ">
+                <article class="plat" id="wontonDix">
+                    <p>
+                        Wonton <br />红油/清汤龙抄手（10P）<br />9€80
+                    </p>
+                </article>
+                <article class="plat" id="wontonQuinze">
+                    <p>
+                        Wonton <br/>红油/清汤龙抄手（15P）<br />12,80 €
+                    </p>
+                </article>
+                <article class="plat" id="traversPorc">
+                    <p>
+                        Travers de porc (pour 2)<br />干锅排骨（2人份）<br />25,80 €
+                    </p>
+                </article>
+                <article class="plat" id="traversPorcCrevettes">
+                    <p>
+                        Travers de porc<br />avec Crevettes<br />干锅排骨虾（2人份）<br />26,80 €
+                    </p>
+                </article>
+                <article class="plat" id="pouletLegumesMarines">
+                    <p>
+                        Poulet et légumes<br />marinés<br />酸菜鸡（两大盒）<br />28,80 €
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="conteneur-plats" id="speSichuan">
+            <h2 id="specsichuan" class="titretypeplat">我们经典招牌菜 <br /> Spécialités du Sichuan</h2>
+            <div class="flexbox-container">
+                <article class="plat" id="poissonDongpo">
+                    <p>
+                        Poisson façon<br />Dongpo (pour 2)<br />-东坡冷锅鱼（2人份）&#127798;<br /> 26,80 €
+                    </p>
+                </article>
+                <article class="plat" id="pouletTaro">
+                    <p>
+                        Poulet au Taro<br />et tripes de porc (pour 2)<br /> 芋儿肥肠鸡(两大盒）&#127798;&#127798;
+                        <br />28,80 €
+                    </p>
+                </article>
+                <article class="plat" id="lapSauteLegumes">
+                    <p>
+                        Lapin sauté avec<br />légumes marinés<br />泡椒兔丁&#127798;&#127798;<br /> 16,80 €
+                    </p>
+                </article>
+                <article class="plat" id="pSautePiments">
+                    <p>
+                        Poulet sauté<br />au piment<br />美味尖椒鸡&#127798;&#127798;<br />14,50 €
+                    </p>
+                </article>
+                <article class="plat" id="lapEpicePimente">
+                    <p>
+                        Lapin épicé<br />et pimenté<br />尖椒兔丁&#127798;&#127798;<br />16,80 €
+                    </p>
+                </article>
+                <article class="plat" id="pFritEpice">
+                    <p>
+                        Poulet frit épicé à<br />la façon de Chongqing<br /> 重庆辣子鸡&#127798;&#127798;
+                        <br />14,50 €
+                    </p>
+                </article>
+                <article class="plat" id="abatsChongqing">
+                    <p>
+                        Assortiment d'abats<br />façon de Chongqing<br /> 重庆毛血旺&#127798;&#127798;
+                        <br />22,80 €
+                    </p>
+                </article>
+                <article class="plat" id="pCuitEtuvee">
+                    <p>
+                        Poulet cuit à l'etuvee<br>en papier de cuisson<br /> 纸包鸡 (2人份)&#127798;&#127798;<br />28,80 €
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="conteneur-plats" id="nosMarmites">
+            <h2 id="marmites" class="titretypeplat">水煮系列 - Nos Marmites</h2>
+            <div class="flexbox-container">
+                <article class="plat" id="abatsChongqing">
+                    <p>
+                        Assortiment d’abats<br />façon de Chongqing<br /> 重庆毛血旺-两大盒&#127798;&#127798;
+                        <br />22€80
+                    </p>
+                </article>
+                <article class="plat" id="marBf">
+                    <p>
+                        Marmite de boeuf<br />水煮牛肉-两大盒&#127798;&#127798;<br />22,80 €
+                    </p>
+                </article>
+                <article class="plat" id="pnPiment">
+                    <p>
+                        Poisson cuit<br />au piment&#127798;<br />水煮鱼（两大盒）<br />22,80 €
+                    </p>
+                </article>
+                <article class="plat" id="marmPoissLegMar">
+                    <p>
+                        Marmite de poisson<br />avec légumes marinés<br /> 酸菜鱼（两大盒）&#127798;
+                        <br />22,80 €
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="conteneur-plats" id="platsSichuan">
+            <h2 id="platssichuan" class="titretypeplat">川香热菜 - Plats du Sichuan</h2>
+            <div class="flexbox-container ">
+                <article class="plat" id="pOigLeg">
+                    <p>
+                        Porc sauté aux<br>oignons et légumes<br />回锅肉<br />11,80 €
+                    </p>
+                </article>
+                <article class="plat" id="pSauteAigreDouce">
+                    <p>
+                        Porc sauté à la<br /> sauce aigre-douce<br />鱼香肉丝<br />12,80 €
+                    </p>
+                </article>
+                <article class="plat" id="pnSauceTomate">
+                    <p>
+                        Poisson à la<br />sauce tomate<br />茄汁鱼<br />12,80 €
+                    </p>
+                </article>
+                <article class="plat" id="pKongPao">
+                    <p>
+                        Poulet "Kong Pao "<br />宫保鸡丁<br />12,80 €
+                    </p>
+                </article>
+                <article class="plat" id="pPimMar">
+                    <p>
+                        Porc sauté au<br /> piment mariné<br />泡椒猪肉丝&#127798;<br />12,80 €
+                    </p>
+                </article>
+                <article class="plat" id="pSautePiment">
+                    <p>
+                        Porc sauté au piment<br />尖椒猪肉丝&#127798;<br />12,80 €
+                    </p>
+                </article>
+                <article class="plat" id="crevettesSautees">
+                    <p>
+                        Crevettes sautées<br /> sel et poivre<br />椒盐虾<br />13,80 €
+                    </p>
+                </article>
+                <article class="plat" id="pVapeurLegMar">
+                    <p>
+                        Porc à la vapeur avec<br /> légumes marinées<br />梅菜扣肉<br />13,80 €
+                    </p>
+                </article>
+                <article class="plat" id="piedsPorcEpPim">
+                    <p>
+                        Pieds de porc<br />épicés, pimentés<br />辣子猪蹄&#127798;&#127798;<br />14,50 €
+                    </p>
+                </article>
+                <article class="plat" id="piedsPorcEp">
+                    <p>
+                        Pieds de porc épicés<br />火爆猪蹄&#127798;&#127798;<br />14,50 €
+                    </p>
+                </article>
+                <article class="plat" id="bSautePimMar">
+                    <p>
+                        Boeuf sauté au<br />piment mariné<br />泡椒牛肉丝&#127798;<br />14,50 €
+                    </p>
+                </article>
+                <article class="plat" id="bEmiSautPim">
+                    <p>
+                        Boeuf émincé<br />sauté au piment<br />尖椒牛肉丝&#127798;<br />14,50 €
+                    </p>
+                </article>
+                <article class="plat" id="bSautOign">
+                    <p>
+                        Boeuf sauté<br />aux oignons<br />洋葱牛肉<br />14,80 €
+                    </p>
+                </article>
+                <article class="plat" id="tripesPorc">
+                    <p>
+                        Tripes de porc sautées<br />épiceés et pimentées<br />辣子肥肠&#127798;&#127798;<br />15,80 €
+                    </p>
+                </article>
+                <article class="plat" id="tripesPorcPim">
+                    <p>
+                        Tripes de porc<br />sautées au piment<br />火爆肥肠&#127798;&#127798;<br />15,80 €
+                    </p>
+                </article>
+                <article class="plat" id="calMarSau">
+                    <p>
+                        Calmar mariné sauté<br />泡椒鱿鱼须<br />17,80 €
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="conteneur-plats" id="woks">
+            <h2 id="woks" class="titretypeplat">香煮干锅 - Woks</h2>
+            <div class="flexbox-container">
+                <article class="plat" id="pouletAuxEpices">
+                    <p>
+                        Poulet cuit aux épices<br /> pimenté en wok (2 pers)<br /> 干锅鸡（两大盒）🌶🌶
+                        <br />24,80 €
+                    </p>
+                </article>
+                <article class="plat" id="traversPorc2">
+                    <p>
+                        Travers de porc (pour 2)<br />干锅排骨（两个人）&#127798;&#127798;<br />25,80 €
+                    </p>
+                </article>
+                <article class="plat" id="tripesEpices">
+                    <p>
+                        Tripes aux épices<br />pimenté en wok (pour 2)<br /> 干锅肥肠（两大盒）&#127798;&#127798;
+                        <br />26,80 €
+                    </p>
+                </article>
+                <article class="plat" id="crevCalCuits">
+                    <p>
+                        Crevettes et calmar cuits<br /> en wok, épicés, pimentés<br /> 干锅鱿鱼虾（两大盒）🌶🌶
+                        <br />26,80 €
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="conteneur-plats" id="platsFroids">
+            <h2 id="platsfroids" class="titretypeplat">别样凉菜 - Plats froids variés</h2>
+            <div class="flexbox-container ">
+                <article class="plat" id="tofOce">
+                    <p>Tofu et œuf de “cent ans”<br />皮蛋豆腐<br />10,80 €</p>
+                </article>
+                <article class="plat" id="mouton">
+                    <p>Mouton<br />凉拌喜羊羊<br />12,80 €</p>
+                </article>
+                <article class="plat" id="salConcSceAil">
+                    <p>Salade de concombre<br />avec sauce à l'ail<br />凉拍黄瓜<br />8,80 €</p>
+                </article>
+                <article class="plat" id="salTrLeg">
+                    <p>Salade aux trois légumes<br />凉拌三丝（红油🌶/白油）<br />8,80 €</p>
+                </article>
+                <article class="plat" id="salPlSceEp">
+                    <p>
+                        Salade au poulet<br />émincé à la sauce épicée<br />手撕鸡🌶<br /> 10,80 €
+                    </p>
+                </article>
+                <article class="plat" id="oreilPsceP">
+                    <p>
+                        Oreilles de porc à<br />la sauce pimentée<br />红油耳片🌶<br />10,80 €
+                    </p>
+                </article>
+                <article class="plat" id="salBfPimDx">
+                    <p>Salade de boeuf<br />au piment doux<br />卤香牛肉🌶<br />12,80 €</p>
+                </article>
+                <article class="plat" id="oeuCtAnPimV">
+                    <p>Oeuf de "cent ans"<br />au piment vert<br />椒香皮蛋🌶<br />9,80 €</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="conteneur-plats" id="legSautes">
+            <h2 id="legsautes" class="titretypeplat">清心时蔬 - Légumes sautés</h2>
+            <div class="flexbox-container ">
+                <article class="plat" id="salLaitSaut">
+                    <p>Salade de laitues sautées<br />légèrement pimentées<br />炝炒生菜<br /> 9,80 €
+                    </p>
+                </article>
+                <article class="plat" id="pdtAD">
+                    <p>Sauté de pommes de<br /> terre sauce aigre-douce<br /> ou aigre-piment<br /> 炒土豆丝: 酸溜/酸辣🌶<br />8,80 €
+                    </p>
+                </article>
+                <article class="plat" id="chShanghai">
+                    <p>Chou de "Shanghai "<br />sauté au piment<br />炝炒上海青<br /> 9,80 €
+                    </p>
+                </article>
+                <article class="plat" id="chChinois">
+                    <p>Chou chinois<br />émincé, sauté<br />手撕包菜🌶<br />9,80 €</p>
+                </article>
+                <article class="plat" id="tfMapo">
+                    <p>Tofu "Mapo "<br />麻婆豆腐🌶<br />10,80 €</p>
+                </article>
+                <article class="plat" id="aubYuxiang">
+                    <p>
+                        Aubergines sautées<br />à la sauce "Yuxaing "<br />鱼香茄子<br /> 10,80 €
+                    </p>
+                </article>
+                <article class="plat" id="aubP">
+                    <p>Aubergines sautées<br /> au porc<br />肉沫茄子<br />11,50 €</p>
+                </article>
+                <article class="plat" id="harP">
+                    <p>Haricots sautés<br />au porc<br />肉沫豇豆<br />11,80 €</p>
+                </article>
+                <article class="plat" id="cpP">
+                    <p>Coco plat sautés<br />au porc<br />干煸四季豆<br />10,80 €</p>
+                </article>
+                <article class="plat" id="aubH">
+                    <p>Aubergines sautées<br />aux haricots<br />豆角烩茄子<br />11,50 €</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="conteneur-plats" id="soupes">
+            <h2 id="soupes" class="titretypeplat">解腻靓汤 - Soupes</h2>
+            <div class="flexbox-container">
+                <article class="plat" id="speTomOeu">
+                    <p>Soupe de tomates<br />aux oeufs<br />西红柿鸡蛋汤<br />8,80 €</p>
+                </article>
+                <article class="plat" id="speTofLeg">
+                    <p>Soupe de tofu<br />avec légumes<br />时蔬豆腐汤<br />8,80 €</p>
+                </article>
+                <article class="plat" id="speOeufs">
+                    <p>Soupe aux oeufs<br />ade cent ans<br />avec concombres<br /> 黄瓜皮蛋汤
+                        <br /> 9,80 €
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="conteneur-plats" id="accompagnements">
+            <h2 id="accompagnements" class="titretypeplat">主食 - Accompagnements</h2>
+            <div class="flexbox-container">
+                <article class="plat" id="rNature">
+                    <p>Riz nature<br />米饭<br />2,00 €</p>
+                </article>
+                <article class="plat" id="rCant">
+                    <p>Riz cantonais<br />炒饭<br />8,00 €</p>
+                </article>
+                <article class="plat" id="nSautLeg">
+                    <p>Nouilles sautées<br />aux légumes<br />素炒面<br />8,80 €</p>
+                </article>
+                <article class="plat" id="nSautP">
+                    <p>Nouilles sautées<br />au poulet<br />鸡肉炒面<br />9,00 €</p>
+                </article>
+                <article class="plat" id="nSautBf">
+                    <p>Nouilles sautées<br />au boeuf<br />牛肉炒面<br />9,80 €</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="conteneur-plats" id="desserts">
+            <h2 id="desserts" class="titretypeplat ">甜点 - Desserts</h2>
+            <div class="flexbox-container">
+                <article class="plat" id="perleCoco">
+                    <p>Perles de coco<br />糯米糍 （2 pcs)<br />3,80 €</p>
+                </article>
+                <article class="plat" id="lychee">
+                    <p>Lychees<br />糖水荔枝（7/8 pcs）<br />3,80 €</p>
+                </article>
+                <article class="plat" id="mochiGlace">
+                    <p>Mochi glace (parfum mangue)<br />冰皮芒果<br />3,80 €</p>
+                </article>
+                <article class="plat" id="">
+                    <p>Nougat chinois au sésame<br />芝麻糖 (6/7 pcs)<br />3,80 €</p>
+                </article>
+                <article class="plat" id="gUneB">
+                    <p>Glace-vanille/chocolat<br />fraise/mangue/coco<br />冰淇淋 1 boule<br /> 2,20 €
+                    </p>
+                </article>
+                <article class="plat" id="gDeuxB">
+                    <p>Glace-vanille/chocolat<br />fraise/mangue/coco<br /> 冰淇淋 2 boules<br />4,00 €
+                    </p>
+                </article>
+                <article class="plat" id="gTroisB">
+                    <p>Glace-vanille/chocolat<br />fraise/mangue/coco<br /> 冰淇淋 3 boules<br />5,00 €
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="conteneur-plats" id="aperitifs">
+            <h2 id="boissons" class="titretypeplat">开胃酒 - Apéritifs</h2>
+            <div class="flexbox-container">
+                <article class="boisson" id="martR">
+                    <p>Martini rouge<br />4,00 €</p>
+                </article>
+                <article class="boisson" id="martB">
+                    <p>Martini blanc<br />4,00 €</p>
+                </article>
+                <article class="boisson" id="ricard">
+                    <p>Ricard - 4cl<br />4,00 €</p>
+                </article>
+                <article class="boisson" id="kir">
+                    <p>Kir - 4cl<br />4,00 €</p>
+                </article>
+                <article class="boisson" id="mojSnsAlc">
+                    <p>Mojito (sans alcool)<br />4,00 €</p>
+                </article>
+                <article class="boisson" id="mojito">
+                    <p>Mojito <br />6,00 €</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="conteneur-plats" id="bieres">
+            <h2 id="boissons" class="titretypeplat">啤酒 - Bières</h2>
+            <div class="flexbox-container">
+                <article class="boisson" id="">
+
+                </article>
+                <article class="boisson" id="">
+
+                </article>
+                <article class="boisson" id="">
+
+                </article>
+                <article class="boisson" id="">
+
+                </article>
+            </div>
+        </section>
+
+
+        <section class="conteneur-plats" id="bchaudes">
+            <h2 id="boissons" class="titretypeplat">热的饮料 - Boissons chaudes</h2>
+            <div class="flexbox-container">
+                <article class="boisson" id="">
+
+                </article>
+                <article class="boisson" id="">
+
+                </article>
+                <article class="boisson" id="">
+
+                </article>
+                <article class="boisson" id="">
+
+                </article>
+            </div>
+        </section>
+
+        <section class="conteneur-plats" id="vrouges">
+            <h2 id="boissons" class="titretypeplat">红酒 - Vins rouges</h2>
+            <div class="flexbox-container">
+                <article class="boisson" id="">
+
+                </article>
+                <article class="boisson" id="">
+
+                </article>
+                <article class="boisson" id="">
+
+                </article>
+                <article class="boisson" id="">
+
+                </article>
+            </div>
+        </section>
+
+        <section class="conteneur-plats" id="vblancs">
+            <h2 id="boissons" class="titretypeplat">白葡萄酒 - Vins blancs</h2>
+            <div class="flexbox-container">
+                <article class="boisson" id="">
+
+                </article>
+                <article class="boisson" id="">
+
+                </article>
+                <article class="boisson" id="">
+
+                </article>
+                <article class="boisson" id="">
+
+                </article>
+            </div>
+        </section>
+
+        <section class="conteneur-plats" id="vrose">
+            <h2 id="boissons" class="titretypeplat">玫瑰酒 - Vin rosé</h2>
+            <div class="flexbox-container">
+                <article class="boisson" id="">
+
+                </article>
+                <article class="boisson" id="">
+
+                </article>
+                <article class="boisson" id="">
+
+                </article>
+                <article class="boisson" id="">
+
+                </article>
+            </div>
+        </section>
+
+        <section class="conteneur-plats" id="vpichet">
+            <h2 id="boissons" class="titretypeplat">投手里装得酒 - Vin en pichet</h2>
+            <div class="flexbox-container">
+                <article class="boisson" id="">
+
+                </article>
+                <article class="boisson" id="">
+
+                </article>
+                <article class="boisson" id="">
+
+                </article>
+                <article class="boisson" id="">
+
+                </article>
+            </div>
+        </section>
+    </main>
+
+</body>
+<!-- BOOTSTRAP 4.6.x + jquery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns " crossorigin="anonymous "></script>
+
+<!--Scripts spécifiques à la page : seront mis en fichier script en version livrable-->
+<script>
+    // Replie le menu de navigation après clic sur un lien
+    $('.navbar-collapse a').click(function() {
+        $(".navbar-collapse").collapse('hide');
+    });
+</script>
+
+</html>

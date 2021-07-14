@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&Agrave; propos / Contact - AIGLE d'ORIENT</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!--Nos styles à nous...-->
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+
+    <!--SOUCI ! la navbar fonctionne bien, le bouton
+    dropdown y est mais n'est pas visible il faut
+    élargir la fenêtre pour que les items apparaisse t-->
+    <nav class="navbar navbar-expand-lg" <nav class="navbar navbar-expand-lg class bg-dark navbar-dark fixed-top" id="navbarDynamique">
+        <a class="navbar-brand" href="#"><img src="./images/icones/logoao.jpg" alt="Restaurant Aigle d'Orient - 露凝香•川味居" class="logoimg" /></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#items" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            ALLEZ VERS...
+          </button>
+
+        <!---->
+        <div class="collapse navbar-collapse navbar-inverse black" id="items">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link  text-uppercase" href="#">Haut de page<span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link text-uppercase" href="./documents/2021-06-20 - KBIS AIGLE d'ORIENT - 848 380 721 00011.pdf" target="_blank">Informations détaillées</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-uppercase" href="./commande.html">点菜 - Commandes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!---->
+
+    <address>
+        <div>AIGLE d'ORIENT</div>
+        <div>SIRET : 848 380 721 00011 - RCS PARIS</div>
+        <div>Gérant : M. LIU Yishan</div>
+        <div> Adresse : 7 rue (Marguerite) de Rochechouart, 75009 PARIS</div>
+        <div><a href="tel: +33950775335"><span class="symboleIcone">&#9742;</span> : 09 50 77 53 35</a></div>
+        <div><a href="mailto: anton.sandu68@mail.ru"><span  class="symboleIcone">&#9993;</span> : anton.sandu68@mail.ru</a></div> 
+    </address>
+
+
+    <!-- BOOTSTRAP 4.6.x + jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns " crossorigin="anonymous "></script>
+</body>
+<script>
+    // Replie le menu de navigation après clic sur un lien
+    $('.navbar-collapse a').click(function() {
+        $(".navbar-collapse").collapse('hide');
+    });
+</script>
+
+</html>

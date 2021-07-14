@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- 
+Simpliez-vous la tâche : faites un "word wrap" (ALT+Z)
+pour bien visualiser ces explications ainsi que le contenu
+
+   Remarques : 
+    1°)cette page n'a pas vocation à être indexée car elle n'est accessible que par les personnes autorisées à modifier le menu.
+    2°) Bien que la page soit un tant soit peu responsive, il n'est pas commode de faire des mises à jour depuis un mobile. Les ressources (images)... sont supposéesse trouver sur un serveur.
+
+    Depuis cette page le gérant/responsable du restauranta fait les opérations de mise à jour sur les plats du menu, typiquement les opérations de CRUD.
+
+    Il/elle ajoute, modifie, supprime les types de plats ainsi que les plats. 
+
+    Un type de plat est une subdivision des plats proposés dans le menu - ex : Spécialités du Sichuan, Woks, Légumes sautés, Desserts, Entrées...
+
+    Les plats sont rattachés à un ou plusieurs types de plat (en général un seul, au plus deux).
+
+    Une fois la modification faite en base, l'administrateur poura : 
+    1°) visualiser la mise à jour directement dans la console présente dans la liste en dessous du formulaire de saisie.
+    2°) accéder par un lien direct depuis l'entête vers la page de commandes visible par les clients, et contrôller que le plat est bien disponible en ligne.
+  -->
+
+<head>
+    <meta charset="UTF-8">
+    <!--demande à ce que le page ne soit pas indexée-->
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styleadmin.css">
+    <title>Administration plats Aigle d'Orient</title>
+</head>
+
+<body>
+
+    <div id="formContainer">
+
+        <form method="post" action="" enctype="multipart/form-data" id="formAdmin">
+            <h1>Administration Aigle d'Orient</h1>
+            <div>
+                <input type="text" placeholder="Nom du plat en français" name="nomFrancais" required>
+
+                <input type="text" placeholder="中国采的名字" name="nomChinois" required>
+            </div>
+            <div id="choixPhoto">
+                <label for="imagePlat">Sélectionnez la photo du plat</label>
+                <input class="fichier" type="file" id="imagePlat" name="imageplat" accept=".jpg, .jpeg, .png">
+            </div>
+            <div>
+                <label for="typeplat">Type de consommation :</label>
+                <select size="0" name="typeplat" id="typeplat" required>
+                    <option value="0"></option>
+                    <option value="1">镇店之宝 - Trésor de Chongqing</option>
+                    <option value="2">新品尝鲜 - Nouveautés</option>
+                    <option value="3">我们经典招牌菜 - Spécialités du Sichuan</option>
+                    <option value="4">水煮系列 - Nos Marmites</option>
+                    <option value="5">川香热菜 - Plats du Sichuan</option>
+                    <option value="6">香煮干锅 - Woks</option>
+                    <option value="7">别样凉菜 - Plats froids variés</option>
+                    <option value="8">清心时蔬 - Légumes sautés</option>
+                    <option value="9">解腻靓汤 - Soupes</option>
+                    <option value="10">主食 - Accompagnements</option>
+                    <option value="11">甜点 - Desserts</option>
+                    <option value="12">开胃酒 - Apéritifs</option>
+                    <option value="13">啤酒 - Bières</option>
+                    <option value="14">热的饮料 - Boissons chaudes</option>
+                    <option value="15">红酒 - Vins rouges</option>
+                    <option value="16">白葡萄酒 - Vins blancs</option>
+                    <option value="17">玫瑰酒 - Vin rosé</option>
+                    <option value="18">投手里装得酒 - Vin en pichet</option>
+
+                </select>
+            </div>
+            <div id="boutons">
+                <button type="submit">Ajouter/Modifier</button>
+                <button type="reset">Initialiser</button>
+            </div>
+        </form>
+    </div>
+
+    <select name="listePlats" id="listePlats" size="50" multiple="multiple" aria-expanded="true">
+        <option value="1">Plat nom français n° 1 | 中国采的名字  第 1 号 | ./images/plat1</option>
+        <option value="2">Plat 2</option>
+        <option value="3">Plat 3</option>
+        <option value="4">Plat 4</option>
+
+        </select>
+
+    <!--
+    <div id="nameofsite">
+        <img src="./images/1201882.jpg" class="logo">
+
+
+        <div class="slogan">
+            <h1> WAGANA </h1>
+            <h6> Right car & Right now </h6>
+        </div>
+    </div>
+-->
+    <!--
+    From Shandria to Me: (Direct Message) 02:26 PM
+    <div id="nameofsite">
+
+        <div id="logo">
+            <img src="./images/1201882.jpg" class="toto">
+        </div>
+
+        <h1> WAGANA </h1>
+    </div>
+    <div id="slogan">
+        <h6> Right car & Right now </h6>
+    </div>
+-->
+
+</body>
+
+<script>
+</script>
+
+</html>

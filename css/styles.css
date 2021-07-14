@@ -1,0 +1,193 @@
+    /*head*/
+    
+    * {
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+    /* nav button, */
+    
+    #groupeboutons a {
+        color: white;
+        font-size: 1rem;
+    }
+    
+    .navbar-toggler {
+        color: white;
+    }
+    
+    nav img {
+        /* width: 150px; */
+        width: 6rem;
+        height: 6rem;
+    }
+    
+    ul li a,
+    a:hover {
+        color: white;
+        font-size: 1rem.2;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid rgb(81, 58, 42);
+        background-color: black;
+        /*barre de navigation 'clouée' en haut*/
+        position: fixed;
+        /* position: sticky; - ne convient pas...*/
+        border-radius: 5px;
+        margin-top: 0px;
+        top: 0px;
+        /*z-index: 20%;*/
+        align-items: center;
+        /* padding: 1rem 1.5rem; */
+    }
+    /* a,
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        color: inherit;
+    } */
+    /*style du menu de navigation
+    le logo et le groupe des items
+    ne doivent pas se replier à la ligne*/
+    
+    .menunavigation {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    
+    .groupeboutons {
+        display: flex;
+        flex-flow: row wrap;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    
+    .navbar-toggler {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
+    /*     */
+    
+    body {
+        font-family: Helvetica, sans-serif;
+    }
+    
+    address {
+        text-align: center;
+        font-size: larger;
+        font-weight: bolder;
+        padding-top: 3rem;
+    }
+    
+    header h1 {
+        color: #513a2a;
+        border-radius: 5px;
+        margin: 1.5rem 0;
+        background-color: rgb(81, 58, 42, 100%);
+        color: gold;
+        text-align: center;
+    }
+    
+    h2 {
+        text-align: center;
+        margin-bottom: 1.25rem;
+        padding-top: 8.3rem;
+    }
+    
+    .plat {
+        font-family: Helvetica, Impact, sans-serif;
+        margin: 3px;
+        background-color: orange;
+        font-weight: bolder;
+        width: 250px;
+        border-radius: 10px;
+    }
+    
+    .conteneur-plats .plat p {
+        padding: 0.5rem;
+        margin: auto;
+    }
+    /* Conteneur des plats */
+    
+    .flexbox-container {
+        display: flex;
+        /*FLEX DIRECTION*/
+        /* flex-direction: row; */
+        /* flex-wrap: wrap; */
+        /*On regroupe !!!*/
+        flex-flow: row wrap;
+        /* flex-direction: row-reverse; */
+        /*FLEX WRAP*/
+        justify-content: center;
+        /*justify-content: stretch;*/
+        /*ALIGN ITEMS */
+        /*ALIGN CONTENT*/
+        /*flex-shrink*/
+    }
+    
+    .boisson {
+        font-family: Helvetica, Impact, sans-serif;
+        margin: 3px;
+        padding: 0.5em;
+        background-color: lightblue;
+        font-weight: bolder;
+        width: 200px;
+        border-radius: 10px;
+    }
+    
+    .boisson:nth-child(odd) {
+        background-color: darkturquoise;
+        /*border-radius: ;*/
+    }
+    
+    .boisson:nth-child(even) {
+        background-color: lightskyblue;
+    }
+    /*Transition de couleur progressive
+    au survol du plat*/
+    
+    article {
+        /* background-color: lightblue; */
+        transition-property: background-color;
+        transition-duration: 0.5s;
+    }
+    
+    article:hover {
+        background-color: lightgreen;
+    }
+    /* .nav-item {
+        width: 250px;
+        font-weight: normal;
+    } */
+    /*Obligé de limiter la taille de la police car on
+ a trop d'items (types de plats)' et on ne peut scroller
+ au sein de la navbar une fois déroulée*/
+    
+    .nav-link {
+        font-size: 0.8rem;
+    }
+    /*@media only screen and (max-width:480px) {
+        .dropdown-menu {
+            display: block;
+            position: static;
+            background-color: transparent;
+            border: 0 none;
+            box-shadow: none;
+            margin-top: 0;
+            position: static;
+            width: 100%;
+        }
+    }*/
+    
+    .symboleIcone {
+        font-size: 2rem;
+    }
+    /*     
+    .boutonAPropos {
+        background-color: goldenrod;
+    } */

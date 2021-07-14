@@ -1,0 +1,119 @@
+p {
+    /* On peut choisir une couleur grâce à : 
+        1 - son nom
+        ===> la propriété opacity: .7 permet de donner une transparence à un élément
+
+        2 - sa valeur en RGB : Red Green Blue (R G B) la valeur maximale pour chaque couleur  étant de 255)
+            ===> le blanc correspond à : color : rgb(255 255 255)
+            ===> le noir correspond à :  color : rgb (0 0 0)
+            ===> le rouge correspond à color : rgb(255 0 0)
+            ===> pour gérer la transparence : on utilise la valeur a (alpha)
+            ===> color : rgba(255 255 211 / 50%) : 50% est la valeur de la transparence
+
+        3- sa valeur HEXADECIMAL : #cc3333
+
+            #RRGGBB va de 0 à F ===>#ffffff ===> j'obtiens le blanc
+            #RGB ===> #fff ====> j'obtiens du blanc
+
+            Exemples :
+            #000000 ===> color: black
+            #000
+            #d90cd5 : Rose       
+    */
+    color: #cc3333;
+    background-color: #000;
+    font-size: 20px;
+    opacity: .3;
+}
+
+.parent {
+    width: 600px;
+    height: 250px;
+    background-color: blue
+}
+
+.enfant {
+    /* width : une propriété qui permet de gérer la largeur d'un élément
+    - px ===> 100px
+    - %  ===> 50%
+    - vw ==> view width :  la largeur de l'écran sachant que 50vw => 50%
+    - vh ==> view height : la hauteur de l'écran
+     */
+    background-color: aquamarine;
+    width: 50vw;
+    height: 100vh
+    /* background:linear-gradient(#d90cd5, #000) ; */
+}
+
+
+/* .madiv{
+    width:400px;
+    height:250px;
+    background-color:cornsilk;
+} */
+
+.enfant-div {
+    width: 500px;
+    height: 300px;
+    background-color: darkmagenta;
+    color: #ddd;
+    padding: 20px;
+    /* Les margin acceptent des valeurs négatives */
+    /* margin:-50px 30px 40px 25px; */
+    margin: 0 auto;
+    /* 
+    padding-top:20px;
+    padding-right:30px;
+    padding-bottom: 25px;
+    padding-left:10px;
+
+    padding:20px;
+    padding: 20px 30px 25px 10px;
+    padding: 20px 40px;
+    padding:20px 15px 40px; */
+    /* le padding utilises les unités suivantes : px, % */
+    /* padding: 2%; */
+}
+
+
+/* 
+mon commentaire
+*/
+
+
+/* j'écris mon commentaire */
+
+h1 {
+    color: blue;
+}
+
+
+/* symbole # pour l'id */
+
+#test-id {
+    color: green;
+}
+
+
+/* le .suivi du nom de la classe */
+
+.liste-1 {
+    background-color: hotpink;
+}
+
+.bleu {
+    color: lightseagreen;
+    margin: 30px;
+    background-color: linen;
+}
+
+
+/* span{
+    color:indianred;
+    font-size:20px;
+    background-color:khaki
+}
+
+table, th, td{
+    border: 1px solid indianred;
+} */

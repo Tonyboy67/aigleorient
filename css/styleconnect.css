@@ -1,0 +1,130 @@
+nav img {
+    /* width: 150px; */
+    width: 100px;
+    height: 100px;
+}
+
+#container {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.listederoulante {
+    overflow: scroll;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+
+form {
+    width: 75%;
+    margin: auto;
+    margin-top: 110px;
+    padding: 1rem;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    font-weight: 800;
+    /* box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); */
+}
+
+#container h1,
+h2 {
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    text-align: center;
+    font-weight: 800;
+}
+
+
+/* #container h1 {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+} */
+
+
+/* les inputs */
+
+input[type=text],
+input[type=password] {
+    width: 18rem;
+    padding: 1rem 1rem;
+    margin: 0.5rem 0;
+    display: inline-block;
+    border: 1px solid rgb(3, 2, 2);
+    box-sizing: border-box;
+}
+
+
+/* la tête du bouton selon actions */
+
+input[type=submit],
+input[type=reset] {
+    background-color: rgb(251, 194, 7);
+    color: rgb(46, 12, 12);
+    padding: 0.8rem 1.2rem;
+    font-weight: 800;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    border: none;
+    cursor: pointer;
+    width: 250px;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(46, 12, 12);
+    color: rgb(251, 194, 7);
+    border: 2px solid rgb(230, 8, 38);
+}
+
+input[type=reset]:hover {
+    background-color: rgb(46, 12, 12);
+    color: rgb(251, 194, 7);
+    border: 2px solid rgb(230, 8, 38);
+}
+
+
+/*La présentation selon la tille d'écran
+n'est peut-être pas encore définitive.
+Des réglages peuvent être nécessaires*/
+
+@media only screen and (max-width: 600px) {
+    form {
+        width: 100%;
+    }
+    h1,
+    h2 {
+        width: 100%;
+        margin: auto;
+        padding-bottom: 1rem;
+        text-align: center;
+        font-weight: 800;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    input[type=submit],
+    input[type=reset] {
+        width: 48%;
+        height: 2rem;
+        padding: 0.2rem 0.3rem;
+        margin: 0 auto;
+        cursor: pointer;
+        text-align: left;
+        /* display: inline-block; */
+        border: 1px solid rgb(3, 2, 2);
+        /* box-sizing: border-box; */
+    }
+    input[type=text],
+    input[type=password] {
+        width: 80%;
+        height: 1.5rem;
+        margin: 0.5rem auto;
+        padding: 0.5rem auto;
+    }
+}
