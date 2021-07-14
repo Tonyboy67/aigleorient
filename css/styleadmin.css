@@ -1,75 +1,86 @@
-#formContainer {
-    width: 100%;
-    /* margin: 0 auto; */
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10%;
-    align-items: center;
-}
-
-#formContainer form div button {
-    width: 10rem;
-}
-
-
-/* Bordure formulaire */
-
-form {
-    width: 100%;
-    padding: 1rem;
-    margin-left: 0rem;
-    margin-right: 20rem;
-    border: 2px solid rgb(46, 12, 12);
-    background: #fff;
-    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-
-
-/* les inputs */
-
-input[type=text] {
-    width: 45%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid rgb(51, 3, 3);
-    box-sizing: border-box;
-}
-
-
-/* la tête du bouton selon actions */
-
-button[type=submit],
-button[type=reset] {
-    background-color: rgb(251, 194, 7);
-    color: rgb(46, 12, 12);
-    padding: 10px 10px;
-    font-weight: 800;
-    font-size: 1rem;
-    margin: 8px 0;
-    width: 25%;
-    border: none;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: rgb(46, 12, 12);
-    color: rgb(251, 194, 7);
-    border: 2px solid rgb(230, 8, 38);
-}
-
-#choixPhoto {
-    margin: 5px;
-}
-
-.stylegeneral *,
-input {
-    margin: 10px 15px;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-#listePlats {
-    width: 100%;
-}
+    nav img {
+        /* width: 150px; */
+        width: 6rem;
+        height: 6rem;
+    }
+    
+    nav a {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+    
+    a:hover {
+        color: white;
+        font-size: 2rem;
+    }
+    
+    #formContainer {
+        width: 100%;
+        /* margin: 0 auto; */
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+        align-items: center;
+    }
+    
+    #formContainer form div button {
+        width: 10rem;
+    }
+    /* Bordure formulaire */
+    
+    form {
+        width: 100%;
+        padding: 1rem;
+        margin-left: 0rem;
+        margin-right: 20rem;
+        border: 2px solid rgb(46, 12, 12);
+        background: #fff;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+    /* les inputs */
+    
+    input[type=text] {
+        width: 45%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid rgb(51, 3, 3);
+        box-sizing: border-box;
+    }
+    /* la tête du bouton selon actions */
+    
+    button[type=submit],
+    button[type=reset] {
+        background-color: rgb(251, 194, 7);
+        color: rgb(46, 12, 12);
+        padding: 10px 10px;
+        font-weight: 800;
+        font-size: 1rem;
+        margin: 8px 0;
+        width: 25%;
+        border: none;
+        cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+        background-color: rgb(46, 12, 12);
+        color: rgb(251, 194, 7);
+        border: 2px solid rgb(230, 8, 38);
+    }
+    
+    #choixPhoto {
+        margin: 5px;
+    }
+    
+    .stylegeneral *,
+    input {
+        margin: 10px 15px;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    #listePlats {
+        width: 100%;
+    }

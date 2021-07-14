@@ -49,7 +49,7 @@
         text-decoration: none;
         color: inherit;
     } */
-    /*style du menu de navigation
+    /*ci-dessous : style du menu de navigation
     le logo et le groupe des items
     ne doivent pas se replier à la ligne*/
     
@@ -76,6 +76,9 @@
     body {
         font-family: Helvetica, sans-serif;
     }
+    /*Ce fichier est aussi utilisé
+     dans la page a propos. Là nous
+     avons l'adresse et données de contact*/
     
     address {
         text-align: center;

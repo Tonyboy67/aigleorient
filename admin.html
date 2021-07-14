@@ -15,9 +15,9 @@ pour bien visualiser ces explications ainsi que le contenu
 
     Un type de plat est une subdivision des plats proposés dans le menu - ex : Spécialités du Sichuan, Woks, Légumes sautés, Desserts, Entrées...
 
-    Les plats sont rattachés à un ou plusieurs types de plat (en général un seul, au plus deux).
+    Les plats sont rattachés à un ou plusieurs types de plat (en général un seul, au plus deux). Ici nous imposons un seul type de plat pour un plat choisi.
 
-    Une fois la modification faite en base, l'administrateur poura : 
+    Une fois la modification faite en base, l'administrateur poura (en version finale de l'application): 
     1°) visualiser la mise à jour directement dans la console présente dans la liste en dessous du formulaire de saisie.
     2°) accéder par un lien direct depuis l'entête vers la page de commandes visible par les clients, et contrôller que le plat est bien disponible en ligne.
   -->
@@ -28,11 +28,30 @@ pour bien visualiser ces explications ainsi que le contenu
     <meta name="robots" content="noindex, nofollow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--<link rel="stylesheet" href="css/reset.css"/>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Menu Aigle d'Orient : sélection de plats - 露凝香•川味居 - 菜单 - 点菜">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./css/styleadmin.css">
     <title>Administration plats Aigle d'Orient</title>
 </head>
 
 <body>
+
+    <header>
+
+        <!--Je choisis un "no expand", car la liste du menu est beaucoup trop longue-->
+        <!--"<nav class="navbar navbar-expand-lg"-->
+        <nav class="navbar no expand class bg-dark navbar-dark fixed-top listederoulante" id="navbaadmin">
+            <a class="navbar-brand" href="#"><img src="./images/icones/logoao.jpg" alt="Restaurant Aigle d'Orient - 露凝香•川味居" class="logoimg" /></a>
+
+            <a class="nav-link text-uppercase" href="./commande.html">点菜 - Commandes</a>
+        </nav>
+    </header>
 
     <div id="formContainer">
 
@@ -79,6 +98,9 @@ pour bien visualiser ces explications ainsi que le contenu
         </form>
     </div>
 
+    <!-- Liste des plats ajoutés / modifiés depuis le formulaire ci-dessus
+    En version finale, les actions sur cette liste remplira les champs du formulaire pour y être modifié. La clé de chaque nouveau plat dans la 
+    table en base sera la même. Ce champ sera un champ hidden, pas encore implémenté-->
     <select name="listePlats" id="listePlats" size="50" multiple="multiple" aria-expanded="true" class="stylegeneral">
         <option value="1">Plat nom français n° 1 | 中国采的名字  第 1 号 | ./images/plat1</option>
         <option value="2">Plat 2</option>
@@ -86,9 +108,15 @@ pour bien visualiser ces explications ainsi que le contenu
         <option value="4">Plat 4</option>
     </select>
 
+
+
+
+    <!-- BOOTSTRAP 4.6.x + jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns " crossorigin="anonymous "></script>
 </body>
 
-<script>
-</script>
+
 
 </html>
