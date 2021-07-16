@@ -111,6 +111,11 @@
         border-radius: 10px;
     }
     
+    .plat p img {
+        width: 230px;
+        margin-bottom: 8px;
+    }
+    
     .conteneur-plats .plat p {
         padding: 0.5rem;
         margin: auto;
