@@ -110,9 +110,12 @@
         width: 250px;
         border-radius: 10px;
     }
+    /*414 x 276*/
     
     .plat p img {
         width: 230px;
+        height: 153px;
+        /* height: ; */
         margin-bottom: 8px;
     }
     
